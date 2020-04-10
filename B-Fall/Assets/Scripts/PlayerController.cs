@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     {
 		if (Moving)
 		{
-			Debug.Log("Moving");
 			int dir = 0;
 			if (MovingLeft)
 			{
@@ -30,14 +29,12 @@ public class PlayerController : MonoBehaviour
 
 	public void MoveLeft()
 	{
-		Debug.Log("Registered Input");
 		Moving = true;
 		MovingLeft = true;
 	}
 
 	public void MoveRight()
 	{
-		Debug.Log("Registered Input");
 		Moving = true;
 		MovingLeft = false;
 	}

@@ -29,4 +29,9 @@ public class Points : MonoBehaviour
 		score = score + 1;
 		ScoreText.text = score.ToString();
 	}
+
+	public int GetScore()
+	{
+		return score;
+	}
 }

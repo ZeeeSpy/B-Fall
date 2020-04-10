@@ -10,4 +10,9 @@ public class ChangeScene : MonoBehaviour
 	{
 		SceneManager.LoadScene(LevelName);
 	}
+
+	public void UIButtonChangeScene()
+	{
+		SceneManager.LoadScene(LevelName);
+	}
 }

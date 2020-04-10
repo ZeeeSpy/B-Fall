@@ -8,4 +8,9 @@ public class ExitScript : MonoBehaviour
 	{
 		Application.Quit();
 	}
+
+	public void ExitMethod()
+	{
+		Application.Quit();
+	}
 }
