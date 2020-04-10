@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     {
 		if (Moving)
 		{
+			Debug.Log("Moving");
 			int dir = 0;
 			if (MovingLeft)
 			{
@@ -20,9 +21,11 @@ public class PlayerController : MonoBehaviour
 			{
 				dir = 1;
 			}
+
+
 			Vector2 NewDirection = new Vector2(dir, 0);
 			PlayerRB.AddForce(NewDirection * 0.25f, ForceMode2D.Impulse);
-		}    
+		}
     }
 
 	public void MoveLeft()
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
 	public void MoveRight()
 	{
+		Debug.Log("Registered Input");
 		Moving = true;
 		MovingLeft = false;
 	}
