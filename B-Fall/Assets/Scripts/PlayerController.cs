@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 	public Rigidbody2D PlayerRB;
 	private bool Moving = false;
 	private bool MovingLeft = false;
+	private int currentpress = 0;
 
     void Update()
     {
@@ -31,16 +32,22 @@ public class PlayerController : MonoBehaviour
 	{
 		Moving = true;
 		MovingLeft = true;
+		currentpress++;
 	}
 
 	public void MoveRight()
 	{
 		Moving = true;
 		MovingLeft = false;
+		currentpress++;
 	}
 
-	public void NotMoving()
+	public void NotPress()
 	{
-		Moving = false;
+		currentpress--;
+		if (currentpress == 0)
+		{
+			Moving = false;
+		}
 	}
 }

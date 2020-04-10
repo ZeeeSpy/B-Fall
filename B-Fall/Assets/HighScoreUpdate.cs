@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HighScoreUpdate : MonoBehaviour
 {
+	public GameObject Button;
 	private TextMesh[] HighscoreTM;
 	private string[] suffix = new string[] {"NOPE","st","nd","rd","th","th","th","th","th"};
 	private void Awake()
@@ -16,5 +17,12 @@ public class HighScoreUpdate : MonoBehaviour
 			count++;
 			child.gameObject.AddComponent<BoxCollider2D>();
 		}
+
+		StartCoroutine(ActivateButton());
+	}
+
+	IEnumerator ActivateButton() {
+		yield return new WaitForSeconds(1f);
+		Button.SetActive(true);
 	}
 }

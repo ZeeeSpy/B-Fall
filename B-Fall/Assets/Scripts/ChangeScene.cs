@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 	public string LevelName;
-	private void OnMouseDown()
-	{
-		SceneManager.LoadScene(LevelName);
-	}
 
 	public void UIButtonChangeScene()
 	{
 		SceneManager.LoadScene(LevelName);
+	}
+
+	private void Update()
+	{
+		if (Input.touchCount == 1)
+		{
+			SceneManager.LoadScene(LevelName);
+		}
 	}
 }
