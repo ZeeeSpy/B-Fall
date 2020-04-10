@@ -13,6 +13,7 @@ public class DeathBox : MonoBehaviour
 
 			//Save highscore
 			//Show Retry/Quit/Highscores
+			//reload scene on retry
 		}
 	}
 }

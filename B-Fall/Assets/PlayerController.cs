@@ -5,14 +5,41 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	public Rigidbody2D PlayerRB;
+	private bool Moving = false;
+	private bool MovingLeft = false;
 
     void Update()
     {
-		if (Input.GetAxis("Horizontal") != 0)
+		if (Moving)
 		{
-			int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
+			int dir = 0;
+			if (MovingLeft)
+			{
+				dir = -1;
+			} else
+			{
+				dir = 1;
+			}
 			Vector2 NewDirection = new Vector2(dir, 0);
 			PlayerRB.AddForce(NewDirection * 0.25f, ForceMode2D.Impulse);
 		}    
     }
+
+	public void MoveLeft()
+	{
+		Debug.Log("Registered Input");
+		Moving = true;
+		MovingLeft = true;
+	}
+
+	public void MoveRight()
+	{
+		Moving = true;
+		MovingLeft = false;
+	}
+
+	public void NotMoving()
+	{
+		Moving = false;
+	}
 }

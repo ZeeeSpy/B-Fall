@@ -38,7 +38,6 @@ public class PlatformScript : MonoBehaviour
 		{
 			yield return new WaitForSeconds(2.5f);
 			speed = speed + 0.0025f;
-			Debug.Log(speed);
 		}
 	}
 }
