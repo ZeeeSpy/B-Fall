@@ -7,22 +7,24 @@ public class PlatformScript : MonoBehaviour
 	private const float MaxLeft = -5.25f;
 	private const float MaxRight = -1.5f;
 	private float speed = 0.05f;
-
+	private Rigidbody2D RB;
+	public PointTrigger PT;
 
 	private void Awake()
 	{
 		ShuffleHole();
 		StartCoroutine(IncreaseSpeed());
+		RB = GetComponent<Rigidbody2D>();
 	}
 
-	void FixedUpdate()
+	void Update()
     {
 		transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z); ;
 
 		if (transform.position.y > 5.25)
 		{
 			transform.position = new Vector3(transform.position.x, -5.4f, transform.position.z);
-
+			PT.ResetPoint();
 		}
 	}
 
