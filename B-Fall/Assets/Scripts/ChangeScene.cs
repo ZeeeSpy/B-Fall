@@ -11,12 +11,4 @@ public class ChangeScene : MonoBehaviour
 	{
 		SceneManager.LoadScene(LevelName);
 	}
-
-	private void Update()
-	{
-		if (Input.touchCount == 1)
-		{
-			SceneManager.LoadScene(LevelName);
-		}
-	}
 }
