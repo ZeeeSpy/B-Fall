@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8645970385443580843}
   - component: {fileID: 8645970385443580842}
   - component: {fileID: 8645970385443580841}
-  - component: {fileID: 4273528346670663311}
+  - component: {fileID: 588045107792289350}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -256,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 8645970385443580844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.25, y: -5.38, z: 0}
-  m_LocalScale: {x: 2.25, y: 0.1, z: 1}
+  m_LocalScale: {x: 2.25, y: 0.05, z: 1}
   m_Children:
   - {fileID: 8645970384273945847}
   - {fileID: 8466806687373792930}
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PT: {fileID: 7828600261230510204}
---- !u!50 &4273528346670663311
+--- !u!50 &588045107792289350
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

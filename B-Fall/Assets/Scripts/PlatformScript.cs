@@ -6,7 +6,7 @@ public class PlatformScript : MonoBehaviour
 {
 	private const float MaxLeft = -5.25f;
 	private const float MaxRight = -1.5f;
-	private float speed = 0.05f;
+	private float speed = 0.015f;
 	private Rigidbody2D RB;
 	public PointTrigger PT;
 
@@ -19,7 +19,9 @@ public class PlatformScript : MonoBehaviour
 
 	void Update()
     {
-		transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z); ;
+		//transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z); ;
+		Vector2 NewPos = new Vector2(transform.position.x, transform.position.y + speed);
+		RB.MovePosition(NewPos);
 
 		if (transform.position.y > 5.25)
 		{

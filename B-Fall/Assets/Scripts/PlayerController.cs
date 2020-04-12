@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
 
 			Vector2 NewDirection = new Vector2(dir, 0);
-			PlayerRB.AddForce(NewDirection * 0.25f, ForceMode2D.Impulse);
+			PlayerRB.AddForce(NewDirection * 1f, ForceMode2D.Impulse);
 		}
     }
 
